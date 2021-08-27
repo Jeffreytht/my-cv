@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <title>Jeffrey Tan</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Staatliches" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Staatliches"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <style>
       @page {
         size: A4;
@@ -27,6 +42,11 @@
         font-family: "Roboto";
       }
 
+      hr {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
       page {
         background: white;
         display: block;
@@ -43,6 +63,8 @@
         font-family: "Staatliches";
         height: 100%;
         vertical-align: middle;
+        color: white;
+        font-size: 1.45rem;
       }
 
       #right-sidebar .heading {
@@ -51,12 +73,13 @@
         height: 100%;
         vertical-align: middle;
         color: #2c3d4f;
+        font-size: 1.45rem;
       }
 
       #right-sidebar .sub-heading {
         color: #189cc5;
         font-weight: bold;
-        font-size: 1.25rem;
+        font-size: 1.1rem;
       }
 
       #right-sidebar .date {
@@ -87,7 +110,11 @@
       }
 
       #right-sidebar ul {
-        padding-left: 1rem;
+        padding-left: 1.5rem;
+      }
+
+      #left-sidebar ul {
+        padding-left: 1.5rem;
       }
 
       #profile-pic {
@@ -98,14 +125,12 @@
       }
 
       .left-sidebar-hicon {
-        border: 1px solid white;
         border-radius: 50%;
-        padding: 8px;
+        display: inline-block;
         color: #2c3d4f;
         background-color: white;
-        margin-right: 5px;
-        width: 32px;
-        height: 32px;
+        width: 24px;
+        height: 24px;
         text-align: center;
         vertical-align: center;
       }
@@ -120,12 +145,11 @@
 
       .right-sidebar-hicon {
         border-radius: 50%;
-        padding: 8px;
+        display: inline-block;
         color: white;
         background-color: #189cc5;
-        margin-right: 5px;
-        width: 35px;
-        height: 35px;
+        width: 24px;
+        height: 24px;
         text-align: center;
         vertical-align: center;
       }
@@ -145,40 +169,48 @@
           </div>
           <h4 class="text-center mt-3">Tan Hoe Theng</h4>
           <!--Objective-->
-          <div class="mt-4">
-            <div class="mb-3">
-              <i class="fas fa-crosshairs left-sidebar-hicon"></i>
+          <div class="mt-5">
+            <div class="mb-1">
+              <div class="left-sidebar-hicon">
+                <i class="fas fa-crosshairs fa-xs"></i>
+              </div>
               <h3 class="heading">OBJECTIVE</h3>
             </div>
             <div class="left-sidebar-content">
-              <p> A final year Computer Science student with experience in software engineering is looking for an internship in mobile or web development </p>
+              <p>
+                A final year Computer Science student with experience in
+                software engineering is looking for an internship in mobile or
+                web development
+              </p>
             </div>
           </div>
           <!--Contact Me-->
-          <div class="mt-4">
-            <div class="mb-3">
-              <i class="fas fa-address-book left-sidebar-hicon"></i>
+          <div class="mt-5">
+            <div class="mb-1">
+              <div class="left-sidebar-hicon">
+                <i class="fas fa-address-book fa-xs"></i>
+              </div>
               <h3 class="heading">CONTACT ME</h3>
             </div>
             <ul id="contact-list">
+              <li><i class="left-sidebar-icon fas fa-phone"></i>012-4727438</li>
               <li>
-                <i class="left-sidebar-icon fas fa-phone"></i>012-4727438
+                <i class="left-sidebar-icon far fa-envelope"></i
+                >tanhoetheng@gmail.com
               </li>
               <li>
-                <i class="left-sidebar-icon far fa-envelope"></i>tanhoetheng@gmail.com
+                <i class="left-sidebar-icon fab fa-linkedin-in"></i
+                >jeffrey-tan-968b591b3
               </li>
-              <li>
-                <i class="left-sidebar-icon fab fa-linkedin-in"></i>jeffrey-tan-968b591b3
-              </li>
-              <li>
-                <i class="left-sidebar-icon fab fa-github"></i>jeffreytht
-              </li>
+              <li><i class="left-sidebar-icon fab fa-github"></i>jeffreytht</li>
             </ul>
           </div>
           <!--Technical Skill-->
-          <div class="mt-4">
-            <div class="mb-3">
-              <i class="fas fa-fist-raised left-sidebar-hicon"></i>
+          <div class="mt-5">
+            <div class="mb-1">
+              <div class="left-sidebar-hicon">
+                <i class="fas fa-fist-raised fa-xs"></i>
+              </div>
               <h3 class="heading">Technical Skills</h3>
             </div>
             <div class="left-sidebar-content">
@@ -188,7 +220,10 @@
               </ul>
               <span>Web Development</span>
               <ul>
-                <li>PHP, React JS, Node JS, Python Flask, Boostrap, Sass, JavaScript, jQuery</li>
+                <li>
+                  PHP, React JS, Node JS, Python Flask, Boostrap, Sass,
+                  JavaScript, jQuery
+                </li>
               </ul>
               <span>Mobile Development</span>
               <ul>
@@ -205,11 +240,13 @@
             </div>
           </div>
         </div>
-        <div class="p-5" id="right-sidebar">
+        <div class="p-3" id="right-sidebar">
           <!--Job experiences-->
-          <div id="jobExperiences" class="mb-5">
+          <div id="jobExperiences" class="mb-4">
             <div>
-              <i class="fas fa-industry right-sidebar-hicon"></i>
+              <div class="right-sidebar-hicon">
+                <i class="fas fa-industry fa-xs"></i>
+              </div>
               <h3 class="heading">JOB EXPERIENCES</h3>
             </div>
             <hr />
@@ -221,7 +258,10 @@
                   <span class="date">Apr 2020 - Present</span>
                 </div>
                 <ul style="list-style-type: square">
-                  <li> Develops software for ViTrox V310i Advanced 3D Paste Inspection Machine </li>
+                  <li>
+                    Develops software for ViTrox V310i Advanced 3D Paste
+                    Inspection Machine
+                  </li>
                 </ul>
               </li>
               <li>
@@ -234,9 +274,11 @@
             </ul>
           </div>
           <!--Education-->
-          <div id="education" class="mb-5">
+          <div id="education" class="mb-4">
             <div>
-              <i class="fas fa-university right-sidebar-hicon"></i>
+              <div class="right-sidebar-hicon">
+                <i class="fas fa-university"></i>
+              </div>
               <h3 class="heading">Education</h3>
             </div>
             <hr />
@@ -252,55 +294,107 @@
                 </ul>
               </li>
             </ul>
+            <h5 class="sub-heading">Diploma in Information Technology</h5>
+            <ul>
+              <li>
+                <div>
+                  <span class="sub-title">INTI Internation College Penang</span>
+                  <span class="date">Apr 2018 - Apr 2020</span>
+                </div>
+                <ul style="list-style-type: square">
+                  <li>CGPA: 3.94</li>
+                </ul>
+              </li>
+            </ul>
           </div>
           <!--Achievement-->
-          <div id="achievement" class="mb-5">
+          <div id="achievement" class="mb-4">
             <div>
-              <i class="fas fa-trophy right-sidebar-hicon"></i>
+              <div class="right-sidebar-hicon">
+                <i class="fas fa-trophy fa-xs"></i>
+              </div>
               <h3 class="heading">Achievements</h3>
             </div>
             <hr />
             <ul>
               <li>
                 <div>
-                  <span class="sub-title">First prize in Innovate Malaysia Design Competition AWS Track (IMDC) 2021</span>
+                  <span class="sub-title"
+                    >First prize in Innovate Malaysia Design Competition AWS
+                    Track (IMDC) 2021</span
+                  >
                 </div>
                 <ul style="list-style-type: square">
-                  <li> Developed Pet Lost and Found System (PLFS) with AI Classification and Image Processing</li>
+                  <li>
+                    Developed Pet Lost and Found System (PLFS) with AI
+                    Classification and Image Processing
+                  </li>
+                </ul>
               </li>
-            </ul>
-            </li>
-            <li>
-              <div>
-                <span class="sub-title">Gold medal in PPKomp 2021</span>
-              </div>
-              <ul style="list-style-type: square">
-                <li>Completed a given problems under provided constraints</li>
-              </ul>
-            </li>
+              <li>
+                <div>
+                  <span class="sub-title">Gold medal in PPKomp 2021</span>
+                </div>
+                <ul style="list-style-type: square">
+                  <li>Completed a given problems under provided constraints</li>
+                </ul>
+              </li>
+              <li>
+                <div>
+                  <span class="sub-title">King's Scout Award 2017</span>
+                </div>
+              </li>
             </ul>
           </div>
           <!--Projects-->
-          <div id="achievement" class="mb-5">
+          <div id="projects" class="mb-4">
             <div>
-              <i class="fas fa-clipboard-check right-sidebar-hicon"></i>
+              <div class="right-sidebar-hicon">
+                <i class="fas fa-clipboard-check fa-xs"></i>
+              </div>
               <h3 class="heading">Projects</h3>
             </div>
             <hr />
             <h5 class="sub-heading">Pet Lost & Found System</h5>
             <ul>
-              <li> A mobile application that find missing pet by matching two pets using AI classification and Image Processing </li>
-              <li> Developed using Flutter, Python, AWS cloud services </li>
+              <li>
+                A mobile application that find missing pet by matching two pets
+                using AI classification and Image Processing
+              </li>
+              <li>Developed using Flutter, Python, AWS cloud services</li>
             </ul>
             <h5 class="sub-heading">E-Salon</h5>
             <ul>
-              <li> A web and mobile applications for salon appointments and salons' real-time location tracking </li>
-              <li> Developed using Flutter, PHP, OpenCart, Kotlin </li>
+              <li>
+                A web and mobile applications for salon appointments and salons'
+                real-time location tracking
+              </li>
+              <li>Developed using Flutter, PHP, OpenCart, Kotlin</li>
+            </ul>
+          </div>
+          <!--co-curricular-->
+          <div id="co-curricular" class="mb-4">
+            <div>
+              <div class="right-sidebar-hicon">
+                <i class="fas fa-clipboard-check fa-xs"></i>
+              </div>
+              <h3 class="heading">Co-Curricular</h3>
+            </div>
+            <hr />
+            <h5 class="sub-heading">Peer Assisted Study Sessions Leader</h5>
+            <ul>
+              <li>
+                Conduct 11 C++ classes for student who requires academic helps
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </page>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  </body>undefined
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
