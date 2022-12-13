@@ -1,407 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Jeffrey Tan</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Staatliches"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <style>
-      @page {
-        size: A4;
-        margin: 0;
-      }
 
-      @media print {
-        html,
-        body {
-          width: 210mm;
-          height: 297mm;
-        }
-      }
+<head>
+  <title>Jeffrey Tan</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Staatliches" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <style>
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    @media print {
 
       html,
       body {
-        background-color: black;
-        font-family: "Roboto";
+        width: 210mm;
+        height: 297mm;
       }
+    }
 
-      hr {
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-      }
+    html,
+    body {
+      background-color: black;
+      font-family: "Roboto";
+    }
 
-      page {
-        background: white;
-        display: block;
-        margin: 0 auto;
-      }
+    hr {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
 
-      page[size="A4"] {
-        width: 21cm;
-        height: 29.7cm;
-      }
+    page {
+      background: white;
+      display: block;
+      margin: 0 auto;
+    }
 
-      #left-sidebar .heading {
-        display: inline;
-        font-family: "Staatliches";
-        height: 100%;
-        vertical-align: middle;
-        color: white;
-        font-size: 1.45rem;
-      }
+    page[size="A4"] {
+      width: 21cm;
+      height: 29.7cm;
+    }
 
-      #right-sidebar .heading {
-        display: inline;
-        font-family: "Staatliches";
-        height: 100%;
-        vertical-align: middle;
-        color: #2c3d4f;
-        font-size: 1.45rem;
-      }
+    #left-sidebar .heading {
+      display: inline;
+      font-family: "Staatliches";
+      height: 100%;
+      vertical-align: middle;
+      color: white;
+      font-size: 1.2rem;
+    }
 
-      #right-sidebar .sub-heading {
-        color: #189cc5;
-        font-weight: bold;
-        font-size: 1.1rem;
-      }
+    #left-sidebar {
+      font-size: 0.95rem;
+    }
 
-      #right-sidebar .date {
-        font-weight: bold;
-        font-size: 0.8em;
-      }
+    #right-sidebar .heading {
+      display: inline;
+      font-family: "Staatliches";
+      height: 100%;
+      vertical-align: middle;
+      color: #2c3d4f;
+      font-size: 1.2rem;
+      margin-bottom: 0;
+    }
 
-      #right-sidebar .sub-title {
-        font-weight: bold;
-        margin-right: 0.75rem;
-      }
+    #right-sidebar .sub-heading {
+      font-weight: bold;
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
 
-      #main {
-        height: 100%;
-        width: 100%;
-      }
+    #right-sidebar .sub-sub-heading {
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
 
-      #left-sidebar {
-        background-color: #2c3d4f;
-        color: white;
-        height: 100%;
-        width: 35%;
-      }
+    #right-sidebar .date {
+      font-size: 0.85em;
+    }
 
-      #right-sidebar {
-        height: 100%;
-        width: 65%;
-      }
+    #right-sidebar .language {
+      font-size: 0.85em;
+    }
 
-      #right-sidebar ul {
-        padding-left: 1.5rem;
-      }
+    #right-sidebar .sub-title {
+      font-size: 0.9rem;
+      margin-right: 0.5rem;
+    }
 
-      #left-sidebar ul {
-        padding-left: 1.5rem;
-      }
+    #right-sidebar ul li {
+      font-size: 0.9em;
+    }
 
-      #profile-pic {
-        border-radius: 50%;
-        border: 3px solid white;
-        height: 175px;
-        width: 175px;
-      }
+    #main {
+      height: 100%;
+      width: 100%;
+    }
 
-      .left-sidebar-hicon {
-        border-radius: 50%;
-        display: inline-block;
-        color: #2c3d4f;
-        background-color: white;
-        width: 24px;
-        height: 24px;
-        text-align: center;
-        vertical-align: center;
-      }
+    #left-sidebar {
+      background-color: #2c3d4f;
+      color: white;
+      height: 100%;
+      width: 35%;
+    }
 
-      .left-sidebar-content {
-        padding-left: 2rem;
-      }
+    #right-sidebar {
+      height: 100%;
+      width: 65%;
+    }
 
-      .left-sidebar-icon {
-        margin-right: 0.5rem;
-      }
+    #right-sidebar ul {
+      padding-left: 1.5rem;
+    }
 
-      .right-sidebar-hicon {
-        border-radius: 50%;
-        display: inline-block;
-        color: white;
-        background-color: #189cc5;
-        width: 24px;
-        height: 24px;
-        text-align: center;
-        vertical-align: center;
-      }
+    #left-sidebar ul {
+      padding-left: 1.5rem;
+    }
 
-      #contact-list {
-        list-style-type: none;
-      }
-    </style>
-  </head>
-  <body>
-    <page size="A4">
-      <div id="main" class="d-flex">
-        <div id="left-sidebar" class="p-3">
-          <!--Profile pic-->
-          <div class="mt-2 d-flex justify-content-center">
-            <img id="profile-pic" src="pic.jpg" alt="profile-pic" />
+    #profile-pic {
+      border-radius: 50%;
+      border: 3px solid white;
+      height: 175px;
+      width: 175px;
+    }
+
+    .left-sidebar-hicon {
+      border-radius: 50%;
+      display: inline-block;
+      color: #2c3d4f;
+      background-color: white;
+      width: 24px;
+      height: 24px;
+      text-align: center;
+      vertical-align: center;
+    }
+
+    .left-sidebar-content {
+      padding-left: 2rem;
+    }
+
+    .left-sidebar-icon {
+      margin-right: 0.5rem;
+    }
+
+    .right-sidebar-hicon {
+      border-radius: 50%;
+      display: inline-block;
+      color: white;
+      background-color: #189cc5;
+      width: 24px;
+      height: 24px;
+      text-align: center;
+      vertical-align: center;
+    }
+
+    #contact-list {
+      list-style-type: none;
+    }
+  </style>
+</head>
+
+<body>
+  <page size="A4">
+    <div id="main" class="d-flex">
+      <div id="left-sidebar" class="p-3">
+        <!--Profile pic-->
+        <div class="mt-2 d-flex justify-content-center">
+          <img id="profile-pic" src="pic.jpg" alt="profile-pic" />
+        </div>
+        <h4 class="text-center mt-3">Tan Hoe Theng</h4>
+        <!--Objective-->
+        <div class="mt-4">
+          <div class="mb-1">
+            <div class="left-sidebar-hicon">
+              <i class="fas fa-crosshairs fa-xs"></i>
+            </div>
+            <h3 class="heading">SUMMARY</h3>
           </div>
-          <h4 class="text-center mt-3">Tan Hoe Theng</h4>
-          <!--Objective-->
-          <div class="mt-4">
-            <div class="mb-1">
-              <div class="left-sidebar-hicon">
-                <i class="fas fa-crosshairs fa-xs"></i>
-              </div>
-              <h3 class="heading">OBJECTIVE</h3>
-            </div>
-            <div class="left-sidebar-content">
-              <p>
-                A final year Computer Science student with experience in
-                software engineering is looking for an internship in mobile or
-                web development
-              </p>
-            </div>
-          </div>
-          <!--Contact Me-->
-          <div class="mt-4">
-            <div class="mb-1">
-              <div class="left-sidebar-hicon">
-                <i class="fas fa-address-book fa-xs"></i>
-              </div>
-              <h3 class="heading">CONTACT ME</h3>
-            </div>
-            <ul id="contact-list">
-              <li><i class="left-sidebar-icon fas fa-phone"></i>012-4727438</li>
-              <li>
-                <i class="left-sidebar-icon far fa-envelope"></i
-                >tanhoetheng@gmail.com
-              </li>
-              <li>
-                <i class="left-sidebar-icon fas fa-map-marker-alt"></i>Penang,
-                Malaysia
-              </li>
-              <li>
-                <i class="left-sidebar-icon fab fa-linkedin-in"></i
-                >jeffrey-tan-968b591b3
-              </li>
-              <li><i class="left-sidebar-icon fab fa-github"></i>jeffreytht</li>
-            </ul>
-          </div>
-          <!--Technical Skill-->
-          <div class="mt-4">
-            <div class="mb-1">
-              <div class="left-sidebar-hicon">
-                <i class="fas fa-fist-raised fa-xs"></i>
-              </div>
-              <h3 class="heading">Technical Skills</h3>
-            </div>
-            <div class="left-sidebar-content">
-              <span>Desktop Development</span>
-              <ul>
-                <li>C++, Qt Framework</li>
-              </ul>
-              <span>Web Development</span>
-              <ul>
-                <li>
-                  PHP, React JS, Node JS, Python Flask, Boostrap, Sass,
-                  JavaScript, jQuery
-                </li>
-              </ul>
-              <span>Mobile Development</span>
-              <ul>
-                <li>Android, Flutter, React Native</li>
-              </ul>
-              <span>Image Processing</span>
-              <ul>
-                <li>OpenCV</li>
-              </ul>
-              <span>Cloud Deployment</span>
-              <ul>
-                <li>GCP, AWS</li>
-              </ul>
-            </div>
+          <div class="left-sidebar-content">
+            <p>
+              A software engineer with two years of experiences and currently working as an Android software engineer in
+              Grab
+            </p>
           </div>
         </div>
-        <div class="p-3" id="right-sidebar">
-          <!--Job experiences-->
-          <div id="jobExperiences" class="mb-4">
-            <div>
-              <div class="right-sidebar-hicon">
-                <i class="fas fa-industry fa-xs"></i>
-              </div>
-              <h3 class="heading">JOB EXPERIENCES</h3>
+        <!--Contact Me-->
+        <div class="mt-4">
+          <div class="mb-1">
+            <div class="left-sidebar-hicon">
+              <i class="fas fa-address-book fa-xs"></i>
             </div>
-            <hr />
-            <h5 class="sub-heading">ViTrox Corporation Berhad</h5>
-            <ul>
-              <li>
-                <div>
-                  <span class="sub-title"> R&D Software Engineer </span>
-                  <span class="date">Apr 2020 - Present</span>
-                </div>
-                <ul style="list-style-type: square">
-                  <li>
-                    Develops software for ViTrox V310i Advanced 3D Paste
-                    Inspection Machine
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <span class="sub-title">Trainee</span>
-                <span class="date">Dec 2019 – Mar 2020</span>
-                <ul style="list-style-type: square">
-                  <li>Assists R&D Engineer in debugging existing modules</li>
-                </ul>
-              </li>
-            </ul>
+            <h3 class="heading">CONTACT ME</h3>
           </div>
-          <!--Education-->
-          <div id="education" class="mb-4">
-            <div>
-              <div class="right-sidebar-hicon">
-                <i class="fas fa-university"></i>
-              </div>
-              <h3 class="heading">Education</h3>
+          <ul id="contact-list">
+            <li><i class="left-sidebar-icon fas fa-phone"></i>+60124727438</li>
+            <li>
+              <i class="left-sidebar-icon far fa-envelope"></i>tanhoetheng@gmail.com
+            </li>
+            <li>
+              <i class="left-sidebar-icon fas fa-map-marker-alt"></i>Penang,
+              Malaysia
+            </li>
+            <li>
+              <i class="left-sidebar-icon fab fa-linkedin-in"></i>jeffrey-tan-968b591b3
+            </li>
+            <li><i class="left-sidebar-icon fab fa-github"></i>jeffreytht</li>
+          </ul>
+        </div>
+        <!--Technical Skill-->
+        <div class="mt-4">
+          <div class="mb-1">
+            <div class="left-sidebar-hicon">
+              <i class="fas fa-fist-raised fa-xs"></i>
             </div>
-            <hr />
-            <h5 class="sub-heading">Bachelor of Computer Science (Hons)</h5>
-            <ul>
-              <li>
-                <div>
-                  <span class="sub-title"> Coventry University</span>
-                  <span class="date">Apr 2020 - Present</span>
-                </div>
-                <ul style="list-style-type: square">
-                  <li>Cumulative Average: 82.13 (First class honors)</li>
-                </ul>
-              </li>
-            </ul>
-            <h5 class="sub-heading">Diploma in Information Technology</h5>
-            <ul>
-              <li>
-                <div>
-                  <span class="sub-title"
-                    >INTI International College Penang</span
-                  >
-                  <span class="date">Apr 2018 - Apr 2020</span>
-                </div>
-                <ul style="list-style-type: square">
-                  <li>CGPA: 3.94</li>
-                </ul>
-              </li>
-            </ul>
+            <h3 class="heading">Technical Skills</h3>
           </div>
-          <!--Achievement-->
-          <div id="achievement" class="mb-4">
-            <div>
-              <div class="right-sidebar-hicon">
-                <i class="fas fa-trophy fa-xs"></i>
-              </div>
-              <h3 class="heading">Achievements</h3>
-            </div>
-            <hr />
+          <div class="left-sidebar-content">
+            <span>Mobile Development</span>
+            <ul>
+              <li>Java, Kotlin, Flutter, React Native</li>
+            </ul>
+            <span>Desktop Development</span>
+            <ul>
+              <li>C++, Qt</li>
+            </ul>
+            <span>Web Development</span>
             <ul>
               <li>
-                <div>
-                  <span class="sub-title"
-                    >First prize in Innovate Malaysia Design Competition AWS
-                    Track (IMDC) 2021</span
-                  >
-                </div>
-                <ul style="list-style-type: square">
-                  <li>
-                    Developed Pet Lost and Found System (PLFS) with AI
-                    Classification and Image Processing
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <div>
-                  <span class="sub-title">Gold medal in PPKomp 2021</span>
-                </div>
-                <ul style="list-style-type: square">
-                  <li>Completed a given problems under provided constraints</li>
-                </ul>
-              </li>
-              <li>
-                <div>
-                  <span class="sub-title">King's Scout Award 2017</span>
-                </div>
+                PHP, React JS, Node JS, Python Flask, Bootstrap, Sass,
+                JavaScript, jQuery
               </li>
             </ul>
-          </div>
-          <!--Projects-->
-          <div id="projects" class="mb-4">
-            <div>
-              <div class="right-sidebar-hicon">
-                <i class="fas fa-clipboard-check fa-xs"></i>
-              </div>
-              <h3 class="heading">Projects</h3>
-            </div>
-            <hr />
-            <h5 class="sub-heading">Pet Lost & Found System</h5>
+            <span>Image Processing</span>
             <ul>
-              <li>
-                A mobile application that find missing pet by matching two pets
-                using AI classification and Image Processing
-              </li>
-              <li>Developed using Flutter, Python, AWS cloud services</li>
+              <li>OpenCV</li>
             </ul>
-            <h5 class="sub-heading">E-Salon</h5>
+            <span>Cloud Deployment</span>
             <ul>
-              <li>
-                A web and mobile applications for salon appointments and salons'
-                real-time location tracking
-              </li>
-              <li>Developed using Flutter, PHP, OpenCart, Kotlin</li>
-            </ul>
-          </div>
-          <!--co-curricular-->
-          <div id="co-curricular" class="mb-4">
-            <div>
-              <div class="right-sidebar-hicon">
-                <i class="fas fa-clipboard-check fa-xs"></i>
-              </div>
-              <h3 class="heading">Co-Curricular</h3>
-            </div>
-            <hr />
-            <h5 class="sub-heading">Peer Assisted Study Sessions Leader</h5>
-            <ul>
-              <li>
-                Conduct 11 C++ classes for student who requires academic helps
-                in INTI International College Penang
-              </li>
+              <li>GCP, AWS</li>
             </ul>
           </div>
         </div>
       </div>
-    </page>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      <div class="p-3 mt-3`" id="right-sidebar">
+        <!--Job experiences-->
+        <div id="jobExperiences" class="mb-2">
+          <div>
+            <div class="right-sidebar-hicon">
+              <i class="fas fa-industry fa-xs"></i>
+            </div>
+            <h3 class="heading">JOB EXPERIENCES</h3>
+          </div>
+          <hr />
+          <div class="d-flex justify-content-between">
+            <h5 class="sub-sub-heading">Android Software Engineer</h5>
+            <div class="date">Dec 2021 - Present</div>
+          </div>
+          <div class="sub-heading">Grab</div>
+          <ul class="mb-3">
+            <li>Develops the safety features in Driver and Passenger Grab mobile
+              apps.
+            </li>
+            <li>Designs and writes engineering specifications for various tech initiatives.</li>
+            <li>Collaborates with stakeholders and drives the mobile engineering effort from design, implementation to
+              delivery.</li>
+            <li>Participates in on-call rotation and monitors the performance of Grab applications.</li>
+          </ul>
+          <div class="d-flex justify-content-between">
+            <h5 class="sub-sub-heading">R&D Software Engineer </h5>
+            <span class="date">Apr 2020 - Nov 2021</span>
+          </div>
+          <span class="sub-heading">ViTrox Corporation Berhad</span>
+          <ul>
+            <li>
+              Worked on the GUI of ViTrox V310i Advanced 3D Paste
+              Inspection Machine.
+            </li>
+            <li>
+              Developed several GUI modules and core features.
+            </li>
+            <li>
+              Optimized the machine inspection cycle by reducing the memory overhead.
+            </li>
+          </ul>
+        </div>
+        <!--Education-->
+        <div id="education" class="mb-2">
+          <div>
+            <div class="right-sidebar-hicon">
+              <i class="fas fa-university"></i>
+            </div>
+            <h3 class="heading">Education</h3>
+          </div>
+          <hr />
+          <div class="d-flex justify-content-between">
+            <h5 class="sub-heading">Bachelor of Computer Science (Hons)</h5>
+            <span class="date">Apr 2020 - Apr 2022</span>
+          </div>
+          <span class="sub-title">Coventry University</span>
+          <ul>
+            <li>Cumulative Average: 78.10 (First class honors)</li>
+          </ul>
+          <div class="d-flex justify-content-between">
+            <h5 class="sub-heading">Diploma in Information Technology</h5>
+            <span class="date">Apr 2018 - Apr 2020</span>
+          </div>
+          <span class="sub-title">INTI International College Penang</span>
+          <ul>
+            <li>CGPA: 3.94</li>
+          </ul>
+        </div>
+        <!--Achievement-->
+        <div id="achievement" class="mb-2">
+          <div>
+            <div class="right-sidebar-hicon">
+              <i class="fas fa-trophy fa-xs"></i>
+            </div>
+            <h3 class="heading">Achievements</h3>
+          </div>
+          <hr />
+          <ul>
+            <li>
+              <div>
+                <span class="sub-title">2nd rank in Beam CodeStars 2022</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span class="sub-title">1st prize in Innovate Malaysia Design Competition 2021</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span class="sub-title">Gold medal in PPKomp 2021</span>
+              </div>
+            </li>
+        </div>
+        <!--Projects-->
+        <div id="projects" class="mb-2">
+          <div>
+            <div class="right-sidebar-hicon">
+              <i class="fas fa-clipboard-check fa-xs"></i>
+            </div>
+            <h3 class="heading">Projects</h3>
+          </div>
+          <hr />
+          <h5 class="sub-heading">Gobblet</h5>
+          <ul>
+            <li>
+              A Goblet game developed using Kotlin and Minimax algorithm.
+            </li>
+          </ul>
+          <h5 class="sub-heading">Pet Lost and Found System</h5>
+          <ul>
+            <li>
+              A mobile application developed using Flutters, OpenCV and AWS that matches two pets using AI
+              classification and Image Processing.
+            </li>
+          </ul>
+          <h5 class="sub-heading">Smart Parking System</h5>
+          <ul>
+            <li>
+              A smart parking reservation system developed using MERN stack, React Native and Situm SDK.
+            </li>
+          </ul>
+          <h5 class="sub-heading">Quality Data Transfer System</h5>
+          <ul>
+            <li>
+              A web application developed using ASP.NET to facilitate the process of quality data transfer.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </page>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
