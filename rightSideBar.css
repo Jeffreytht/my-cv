@@ -1,0 +1,38 @@
+#right-sidebar {
+    background-color: white;
+    color: black;
+    height: 100%;
+    width: 65%;
+    padding: 16px;
+}
+
+#right-sidebar .subarticle2>.title {
+    display: flex;
+    justify-content: space-between;
+}
+
+#right-sidebar .subarticle2>.subtitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+#right-sidebar>section>.title>.icon {
+    border-radius: 50%;
+    display: inline-block;
+    color: #189cc5;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    vertical-align: center;
+}
+
+#right-sidebar>section>.title>.text {
+    display: inline;
+    height: 100%;
+    vertical-align: middle;
+    color: black;
+}
+
+#right-sidebar .content {
+    padding-left: 16px;
+}

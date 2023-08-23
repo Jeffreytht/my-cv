@@ -1,0 +1,32 @@
+#left-sidebar {
+    background-color: #f2f2f2;
+    color: black;
+    height: 100%;
+    width: 35%;
+    padding: 16px;
+}
+
+#left-sidebar>article {
+    margin-top: 32px;
+}
+
+#left-sidebar>article>.title>.icon {
+    border-radius: 50%;
+    display: inline-block;
+    color: #189cc5;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    vertical-align: center;
+}
+
+#left-sidebar>article>.title>.text {
+    display: inline;
+    height: 100%;
+    vertical-align: middle;
+    color: black;
+}
+
+#left-sidebar .content {
+    padding-left: 16px;
+}
